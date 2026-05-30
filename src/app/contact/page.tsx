@@ -38,7 +38,7 @@ export default function Contact() {
           Accept: "application/json",
         },
         body: JSON.stringify({
-          access_key: "7a2a0d1b-0e54-4f1b-ba7b-d68f760775d7", // RedDoraLabs free token (can be updated later)
+          access_key: "99b7fb62-7564-44da-8154-dc5f9122ab5e", // prem@reddoralabs.com
           subject: `New Lead: ${formData.service} from ${formData.company || formData.name}`,
           from_name: "RedDoraLabs Portal",
           ...formData,
