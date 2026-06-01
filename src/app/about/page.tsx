@@ -184,75 +184,24 @@ export default function About() {
         </div>
       </section>
 
-      {/* Join Our Team — Internships */}
+      {/* Join Our Team CTA */}
       <section className="py-16 border-t border-[#1e1e2f]/20">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
-              <Users className="w-3.5 h-3.5 text-primary" />
-              <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">We&apos;re Hiring</span>
-            </div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white">Join the RedDoraLabs Team</h2>
-            <p className="text-zinc-400 text-xs mt-2 max-w-md mx-auto">
-              We&apos;re looking for passionate interns to grow with us. Learn, build, and make an impact from day one.
-            </p>
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
+            <Users className="w-3.5 h-3.5 text-primary" />
+            <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">We&apos;re Hiring</span>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                icon: PenTool,
-                title: "Content Writing Intern",
-                desc: "Help us craft blog posts, social media content, YouTube video scripts, and technical documentation that educates and inspires the cybersecurity community.",
-                color: "primary",
-                wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Content%20Writing%20Intern%20position.%20Here%20is%20my%20resume.",
-              },
-              {
-                icon: Megaphone,
-                title: "Social Media Manager Intern",
-                desc: "Manage our presence across LinkedIn, Instagram, Twitter/X, Facebook, and YouTube. Plan, schedule, and post content while maintaining brand consistency.",
-                color: "secondary",
-                wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Social%20Media%20Manager%20Intern%20position.%20Here%20is%20my%20resume.",
-              },
-              {
-                icon: Bug,
-                title: "Cybersecurity Analyst Intern",
-                desc: "Get hands-on experience in VAPT, web app testing, Android & iOS security, API penetration testing, and vulnerability research under expert mentorship.",
-                color: "accent-red",
-                wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Cybersecurity%20Analyst%20Intern%20position.%20Here%20is%20my%20resume.",
-              },
-            ].map((role, index) => {
-              const Icon = role.icon;
-              return (
-                <motion.div
-                  key={role.title}
-                  initial={{ y: 30, opacity: 0 }}
-                  whileInView={{ y: 0, opacity: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="glass p-8 rounded-3xl relative overflow-hidden border border-zinc-900 flex flex-col justify-between"
-                >
-                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full filter blur-xl pointer-events-none" />
-                  <div>
-                    <div className={`w-10 h-10 rounded-xl bg-zinc-900 border border-${role.color}/20 flex items-center justify-center mb-6`}>
-                      <Icon className={`w-5 h-5 text-${role.color}`} />
-                    </div>
-                    <h3 className="text-lg font-bold text-white mb-2">{role.title}</h3>
-                    <p className="text-zinc-400 text-xs leading-relaxed mb-6">{role.desc}</p>
-                  </div>
-                  <a
-                    href={role.wa}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-primary text-xs font-semibold hover:gap-3 transition-all"
-                  >
-                    Apply via WhatsApp
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </a>
-                </motion.div>
-              );
-            })}
-          </div>
+          <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Join the RedDoraLabs Team</h2>
+          <p className="text-zinc-400 text-xs max-w-md mx-auto mb-8 leading-relaxed">
+            We&apos;re looking for passionate interns in Content Writing, Social Media Management, and Cybersecurity. Grow with us from day one.
+          </p>
+          <a
+            href="/careers"
+            className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-xl hover:shadow-[0_0_25px_rgba(0,212,255,0.25)] transition-all duration-300 inline-flex items-center gap-2 group"
+          >
+            View Open Positions
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </a>
         </div>
       </section>
 

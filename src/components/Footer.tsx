@@ -92,7 +92,9 @@ export default function Footer() {
               {[
                 { name: "Home", href: "/" },
                 { name: "Services", href: "/services" },
+                { name: "Products", href: "/products" },
                 { name: "About", href: "/about" },
+                { name: "Careers", href: "/careers" },
                 { name: "Contact", href: "/contact" },
               ].map((link) => (
                 <li key={link.name}>
@@ -119,6 +121,8 @@ export default function Footer() {
                 { name: "Red Teaming", href: "/services#cybersec" },
                 { name: "AI Automation Setup", href: "/services#ai" },
                 { name: "LLM Security Testing", href: "/services#ai" },
+                { name: "Web Development", href: "/services#development" },
+                { name: "App Development", href: "/services#development" },
                 { name: "Training & Academy", href: "/services#training" },
               ].map((service) => (
                 <li key={service.name}>

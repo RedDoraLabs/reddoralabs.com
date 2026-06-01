@@ -12,12 +12,13 @@ import {
   Eye, 
   CheckCircle2, 
   ArrowRight,
-  BookOpen,
   MessageSquare,
   GraduationCap,
   Monitor,
   Users,
-  Building2
+  Building2,
+  Globe,
+  Smartphone
 } from "lucide-react";
 
 export default function Services() {
@@ -194,46 +195,67 @@ export default function Services() {
         </div>
       </section>
 
-      {/* Trainings & Workshops */}
-      <section className="py-16 border-t border-[#1e1e2f]/20">
+      {/* Web & App Development */}
+      <section id="development" className="py-16 border-t border-[#1e1e2f]/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="glass p-8 md:p-12 rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-primary/5 rounded-full filter blur-[80px] pointer-events-none" />
-            <div className="absolute top-1/2 right-0 -translate-y-1/2 w-72 h-72 bg-secondary/5 rounded-full filter blur-[80px] pointer-events-none" />
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center">
+              <Globe className="w-5 h-5 text-emerald-400" />
+            </div>
+            <div>
+              <span className="font-mono text-[10px] font-bold text-emerald-400 uppercase tracking-widest block">Pillar Three</span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Development Services</h2>
+            </div>
+          </div>
+          <p className="text-zinc-400 text-xs leading-relaxed max-w-2xl mb-12">
+            We don&apos;t just secure apps — we build them. Modern, scalable, and security-hardened from day one.
+          </p>
 
-            <div className="relative z-10 max-w-xl">
-              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] font-mono text-zinc-400 mb-4">
-                <BookOpen className="w-3.5 h-3.5 text-primary" />
-                Community & Education
-              </div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
-                Trainings & Bootcamps
-              </h2>
-              <p className="text-zinc-400 text-xs leading-relaxed mb-6">
-                We organize corporate security awareness workshops, deep-dive bug bounty training bootcamps, and build local cybersecurity skillsets. 
-                Follow our official YouTube channel **HackingMarathon** to learn active cybersecurity methodologies for free.
-              </p>
-              <a
-                href="https://youtube.com/@HackingMarathon"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-primary text-sm font-semibold hover:gap-3 transition-all"
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              {
+                title: "Web Development",
+                desc: "Full-stack web applications built with modern frameworks — React, Next.js, Node.js. Responsive, performant, and security-hardened from the ground up.",
+                features: ["Custom business websites", "Web applications & dashboards", "E-commerce platforms", "API development & integration"],
+                icon: <Globe className="w-5 h-5 text-emerald-400" />,
+              },
+              {
+                title: "Mobile App Development",
+                desc: "Native and cross-platform mobile applications for Android and iOS. Built with security best practices and modern UI/UX standards.",
+                features: ["Android & iOS native apps", "Cross-platform (React Native)", "UI/UX design & prototyping", "App Store deployment"],
+                icon: <Smartphone className="w-5 h-5 text-emerald-400" />,
+              },
+            ].map((service, index) => (
+              <motion.div
+                key={service.title}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="glass p-8 rounded-3xl relative overflow-hidden group hover:border-emerald-500/20 transition-colors flex flex-col justify-between"
               >
-                Visit HackingMarathon on YouTube
-                <ArrowRight className="w-4 h-4" />
-              </a>
-            </div>
-
-            <div className="w-full md:w-auto shrink-0 flex flex-col gap-3 relative z-10">
-              <div className="p-4 rounded-xl bg-[#0d0d15] border border-zinc-800 text-xs">
-                <h4 className="font-bold text-white mb-1">🎯 Bug Bounty Bootcamp</h4>
-                <p className="text-zinc-400 text-[11px]">Next cohort launching soon</p>
-              </div>
-              <div className="p-4 rounded-xl bg-[#0d0d15] border border-zinc-800 text-xs">
-                <h4 className="font-bold text-white mb-1">🤖 AI for Founders</h4>
-                <p className="text-zinc-400 text-[11px]">Automating workflow safely</p>
-              </div>
-            </div>
+                <div>
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-500/5 rounded-full filter blur-xl pointer-events-none" />
+                  <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center mb-4">
+                    {service.icon}
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-emerald-400 transition-colors">
+                    {service.title}
+                  </h3>
+                  <p className="text-zinc-400 text-xs leading-relaxed mb-6">
+                    {service.desc}
+                  </p>
+                </div>
+                <div className="flex flex-col gap-3 pt-4 border-t border-zinc-900 mt-4">
+                  {service.features.map((feature) => (
+                    <div key={feature} className="flex items-center gap-2">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400 shrink-0" />
+                      <span className="text-zinc-300 text-[11px] font-medium">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
