@@ -13,7 +13,11 @@ import {
   CheckCircle2, 
   ArrowRight,
   BookOpen,
-  MessageSquare
+  MessageSquare,
+  GraduationCap,
+  Monitor,
+  Users,
+  Building2
 } from "lucide-react";
 
 export default function Services() {
@@ -234,6 +238,161 @@ export default function Services() {
         </div>
       </section>
 
+      {/* Training & Academy */}
+      <section id="training" className="py-16 border-t border-[#1e1e2f]/20 bg-[#030305]/30">
+        <div className="max-w-7xl mx-auto px-6">
+          {/* Section Header */}
+          <div className="flex items-center gap-3 mb-4">
+            <div className="w-10 h-10 rounded-xl bg-red-500/10 border border-red-500/20 flex items-center justify-center">
+              <GraduationCap className="w-5 h-5 text-red-400" />
+            </div>
+            <div>
+              <span className="font-mono text-[10px] font-bold text-red-400 uppercase tracking-widest block">Pillar Three</span>
+              <h2 className="text-2xl sm:text-3xl font-bold text-white">Training &amp; Academy</h2>
+            </div>
+          </div>
+          <p className="text-zinc-400 text-xs leading-relaxed max-w-2xl mb-12">
+            Empowering individuals and organizations with industry-ready skills through expert-led programs.
+          </p>
+
+          {/* Course Offerings Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            {[
+              {
+                title: "Cybersecurity Fundamentals",
+                desc: "Complete program covering SOC operations, VAPT methodology, network security, web app security, and defensive fundamentals. From basics to advanced.",
+                icon: <Shield className="w-5 h-5 text-red-400" />,
+              },
+              {
+                title: "Web Development",
+                desc: "Full-stack web development training covering modern frameworks, responsive design, and deployment best practices.",
+                icon: <Code className="w-5 h-5 text-red-400" />,
+              },
+              {
+                title: "Python Programming",
+                desc: "From scripting basics to automation, web scraping, and security tool development.",
+                icon: <Terminal className="w-5 h-5 text-red-400" />,
+              },
+              {
+                title: "AI & Machine Learning",
+                desc: "Practical AI training covering prompt engineering, model deployment, and AI integration for business.",
+                icon: <Cpu className="w-5 h-5 text-red-400" />,
+              },
+            ].map((course, index) => (
+              <motion.div
+                key={course.title}
+                initial={{ y: 30, opacity: 0 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.05 }}
+                className="glass p-8 rounded-3xl relative overflow-hidden group hover:border-red-500/20 transition-colors"
+              >
+                <div className="absolute top-0 right-0 w-24 h-24 bg-red-500/5 rounded-full filter blur-xl pointer-events-none" />
+                <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center mb-4">
+                  {course.icon}
+                </div>
+                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-red-400 transition-colors">
+                  {course.title}
+                </h3>
+                <p className="text-zinc-400 text-xs leading-relaxed mb-4">
+                  {course.desc}
+                </p>
+                <div className="flex items-center gap-2 pt-4 border-t border-zinc-900">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-red-400 shrink-0" />
+                  <span className="text-zinc-300 text-[11px] font-medium">Certification upon completion</span>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+
+          {/* Delivery Modes */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="mb-12"
+          >
+            <h3 className="text-lg font-bold text-white mb-6">Delivery Modes</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              {[
+                {
+                  title: "Live Online",
+                  desc: "Interactive live sessions with real-time Q&A",
+                  icon: <Monitor className="w-4 h-4 text-red-400" />,
+                },
+                {
+                  title: "On-Site",
+                  desc: "In-person training at your organization/campus",
+                  icon: <Building2 className="w-4 h-4 text-red-400" />,
+                },
+                {
+                  title: "Blended",
+                  desc: "Combined on-site and live online for maximum flexibility",
+                  icon: <Users className="w-4 h-4 text-red-400" />,
+                },
+              ].map((mode) => (
+                <div
+                  key={mode.title}
+                  className="p-5 rounded-2xl bg-[#0d0d15] border border-zinc-800 flex items-start gap-3"
+                >
+                  <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0 mt-0.5">
+                    {mode.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-white text-sm mb-1">{mode.title}</h4>
+                    <p className="text-zinc-400 text-[11px] leading-relaxed">{mode.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+
+          {/* For Organizations */}
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="glass p-8 md:p-10 rounded-3xl relative overflow-hidden"
+          >
+            <div className="absolute top-1/2 left-0 -translate-y-1/2 w-72 h-72 bg-red-500/5 rounded-full filter blur-[80px] pointer-events-none" />
+            <div className="relative z-10">
+              <div className="inline-flex items-center gap-2 px-2.5 py-1 rounded-full bg-zinc-900 border border-zinc-800 text-[10px] font-mono text-zinc-400 mb-4">
+                <Building2 className="w-3.5 h-3.5 text-red-400" />
+                For Organizations
+              </div>
+              <h3 className="text-xl sm:text-2xl font-bold text-white mb-3">
+                Bring RedDoraLabs to Your Campus
+              </h3>
+              <p className="text-zinc-400 text-xs leading-relaxed max-w-2xl mb-8">
+                We partner with colleges, schools, and organizations to deliver customized training programs, bootcamps, workshops, and guest sessions. Bring RedDoraLabs to your campus.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4">
+                <a
+                  href="https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20your%20training%20programs.%20Please%20share%20more%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-gradient-to-r from-red-500 to-red-600 text-white text-xs font-bold rounded-lg hover:shadow-[0_0_20px_rgba(239,68,68,0.2)] transition-all duration-300 inline-flex items-center gap-2 justify-center"
+                >
+                  <MessageSquare className="w-4 h-4" />
+                  Interested? Let&apos;s Talk
+                </a>
+                <a
+                  href="https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20We%20are%20interested%20in%20having%20you%20conduct%20a%20training%20session%20/%20workshop%20at%20our%20organization.%20Please%20share%20more%20details."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="px-6 py-3 bg-[#0d0d15] hover:bg-[#111118] border border-zinc-800 text-zinc-300 text-xs font-bold rounded-lg transition-colors inline-flex items-center gap-2 justify-center"
+                >
+                  <Building2 className="w-4 h-4 text-red-400" />
+                  Invite Us to Your Campus
+                </a>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* CTA section */}
       <section className="py-16 border-t border-[#1e1e2f]/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
@@ -251,7 +410,7 @@ export default function Services() {
               Get Custom Quote
             </Link>
             <a
-              href="https://wa.me/919028586517"
+              href="https://wa.me/919699646517"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#0d0d15] hover:bg-[#111118] border border-zinc-800 text-zinc-300 font-medium rounded-xl transition-colors flex items-center justify-center gap-2"

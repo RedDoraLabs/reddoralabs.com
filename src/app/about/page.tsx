@@ -7,7 +7,11 @@ import {
   Eye, 
   Users, 
   Award,
-  Zap
+  Zap,
+  PenTool,
+  Megaphone,
+  Bug,
+  ArrowRight
 } from "lucide-react";
 
 // Custom SVG brand icons to avoid Lucide React import issues
@@ -74,9 +78,9 @@ export default function About() {
       desc: "Artificial intelligence shouldn't be an afterthought. We secure large language models and integrate AI natively into businesses.",
     },
     {
-      icon: Users,
-      title: "Community Driven",
-      desc: "Through our content branch HackingMarathit, we teach offensive security to thousands of students, expanding the skill pipeline.",
+      icon: Award,
+      title: "Startup-Friendly Pricing",
+      desc: "Enterprise-grade security at prices that won't burn your runway. We've been there — we understand budget constraints.",
     },
   ];
 
@@ -180,55 +184,74 @@ export default function About() {
         </div>
       </section>
 
-      {/* HackingMarathit Community Branch */}
+      {/* Join Our Team — Internships */}
       <section className="py-16 border-t border-[#1e1e2f]/20">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="glass p-8 md:p-12 rounded-3xl relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
-            <div className="absolute top-0 right-0 w-80 h-80 bg-accent-red/5 rounded-full filter blur-[80px] pointer-events-none" />
-            
-            <div className="relative z-10 max-w-xl">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-red/10 border border-accent-red/20 text-[10px] font-mono text-accent-red mb-4">
-                <Youtube className="w-4 h-4 text-accent-red animate-pulse" />
-                Community Content
-              </div>
-              <h2 className="text-2xl sm:text-4xl font-bold text-white mb-4">
-                HackingMarathit
-              </h2>
-              <h4 className="text-sm font-mono text-zinc-300 mb-4">
-                The Educational Hub of RedDoraLabs
-              </h4>
-              <p className="text-zinc-400 text-xs leading-relaxed mb-6">
-                HackingMarathit is our free cybersecurity education brand. We teach ethical hacking, VAPT practices, bug bounty strategies, and secure coding patterns. We believe standard corporate consulting is fueled by empowering the base community.
-              </p>
-              <a
-                href="https://youtube.com/@HackingMarathit"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="px-6 py-3 bg-accent-red hover:bg-accent-red/90 text-white text-xs font-bold rounded-lg transition-all flex items-center gap-2 w-fit shadow-lg shadow-accent-red/20"
-              >
-                Subscribe on YouTube
-              </a>
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary/10 border border-primary/20 mb-4">
+              <Users className="w-3.5 h-3.5 text-primary" />
+              <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-widest">We&apos;re Hiring</span>
             </div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white">Join the RedDoraLabs Team</h2>
+            <p className="text-zinc-400 text-xs mt-2 max-w-md mx-auto">
+              We&apos;re looking for passionate interns to grow with us. Learn, build, and make an impact from day one.
+            </p>
+          </div>
 
-            <div className="relative z-10 shrink-0 w-full md:w-80 p-6 rounded-2xl bg-[#030305] border border-zinc-800 flex flex-col gap-4">
-              <span className="font-mono text-[9px] uppercase tracking-widest text-zinc-500 block">
-                Channel Core Metrics
-              </span>
-              <div className="flex flex-col gap-2">
-                <div className="flex justify-between items-center text-xs border-b border-zinc-900 pb-2">
-                  <span className="text-zinc-400">Content Scope</span>
-                  <span className="text-white font-mono font-bold">VAPT & Bugs</span>
-                </div>
-                <div className="flex justify-between items-center text-xs border-b border-zinc-900 pb-2">
-                  <span className="text-zinc-400">Medium</span>
-                  <span className="text-white font-mono font-bold">Marathi / Hindi</span>
-                </div>
-                <div className="flex justify-between items-center text-xs pb-1">
-                  <span className="text-zinc-400">Cost</span>
-                  <span className="text-primary font-mono font-bold">100% Free</span>
-                </div>
-              </div>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                icon: PenTool,
+                title: "Content Writing Intern",
+                desc: "Help us craft blog posts, social media content, YouTube video scripts, and technical documentation that educates and inspires the cybersecurity community.",
+                color: "primary",
+                wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Content%20Writing%20Intern%20position.%20Here%20is%20my%20resume.",
+              },
+              {
+                icon: Megaphone,
+                title: "Social Media Manager Intern",
+                desc: "Manage our presence across LinkedIn, Instagram, Twitter/X, Facebook, and YouTube. Plan, schedule, and post content while maintaining brand consistency.",
+                color: "secondary",
+                wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Social%20Media%20Manager%20Intern%20position.%20Here%20is%20my%20resume.",
+              },
+              {
+                icon: Bug,
+                title: "Cybersecurity Analyst Intern",
+                desc: "Get hands-on experience in VAPT, web app testing, Android & iOS security, API penetration testing, and vulnerability research under expert mentorship.",
+                color: "accent-red",
+                wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Cybersecurity%20Analyst%20Intern%20position.%20Here%20is%20my%20resume.",
+              },
+            ].map((role, index) => {
+              const Icon = role.icon;
+              return (
+                <motion.div
+                  key={role.title}
+                  initial={{ y: 30, opacity: 0 }}
+                  whileInView={{ y: 0, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: index * 0.1 }}
+                  className="glass p-8 rounded-3xl relative overflow-hidden border border-zinc-900 flex flex-col justify-between"
+                >
+                  <div className="absolute top-0 right-0 w-24 h-24 bg-primary/5 rounded-full filter blur-xl pointer-events-none" />
+                  <div>
+                    <div className={`w-10 h-10 rounded-xl bg-zinc-900 border border-${role.color}/20 flex items-center justify-center mb-6`}>
+                      <Icon className={`w-5 h-5 text-${role.color}`} />
+                    </div>
+                    <h3 className="text-lg font-bold text-white mb-2">{role.title}</h3>
+                    <p className="text-zinc-400 text-xs leading-relaxed mb-6">{role.desc}</p>
+                  </div>
+                  <a
+                    href={role.wa}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-primary text-xs font-semibold hover:gap-3 transition-all"
+                  >
+                    Apply via WhatsApp
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </a>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -257,7 +280,7 @@ export default function About() {
                 </p>
               </div>
               <div className="p-3 bg-[#050508] rounded-xl border border-zinc-800 text-center font-mono text-xs text-zinc-300">
-                Udyam: UDYAM-MH-27-0104712
+                Udyam: UDYAM-MH-27-0261181
               </div>
             </div>
 

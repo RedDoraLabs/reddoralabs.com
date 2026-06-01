@@ -119,6 +119,7 @@ export default function Footer() {
                 { name: "Red Teaming", href: "/services#cybersec" },
                 { name: "AI Automation Setup", href: "/services#ai" },
                 { name: "LLM Security Testing", href: "/services#ai" },
+                { name: "Training & Academy", href: "/services#training" },
               ].map((service) => (
                 <li key={service.name}>
                   <Link
@@ -163,7 +164,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <span className="text-[11px] text-zinc-400 font-mono">
-                  Udyam: UDYAM-MH-27-0104712
+                  Udyam: UDYAM-MH-27-0261181
                 </span>
               </div>
             </div>

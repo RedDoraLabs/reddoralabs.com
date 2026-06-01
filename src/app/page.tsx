@@ -15,7 +15,15 @@ import {
   FileText, 
   Users, 
   Award,
-  MessageSquare
+  MessageSquare,
+  Gamepad2,
+  Trophy,
+  Target,
+  Layers,
+  BookOpen,
+  Globe,
+  Smartphone,
+  Mail
 } from "lucide-react";
 
 export default function Home() {
@@ -135,7 +143,7 @@ export default function Home() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
               <a
-                href="https://wa.me/919028586517"
+                href="https://wa.me/919699646517"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-8 py-4 bg-[#0d0d15] hover:bg-[#111118] border border-zinc-800 hover:border-zinc-700 text-zinc-300 font-medium rounded-xl transition-all flex items-center justify-center gap-2"
@@ -250,6 +258,109 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Our Product Section */}
+      <section className="py-20 relative border-t border-[#1e1e2f]/20">
+        <div className="max-w-7xl mx-auto px-6">
+          <motion.div
+            initial={{ y: 30, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass p-8 md:p-12 rounded-3xl relative overflow-hidden border border-red-500/20"
+          >
+            {/* Gradient accent glow */}
+            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-red-500 via-primary to-secondary" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/5 rounded-full filter blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-48 h-48 bg-primary/5 rounded-full filter blur-[80px] pointer-events-none" />
+
+            {/* Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 mb-6">
+              <Gamepad2 className="w-3.5 h-3.5 text-red-500 animate-pulse" />
+              <span className="font-mono text-[10px] font-bold text-red-500 uppercase tracking-widest">
+                Flagship Product
+              </span>
+            </div>
+
+            {/* Title & Description */}
+            <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-white mb-4">
+              RedLabs — Learn Cybersecurity Like a Game
+            </h2>
+            <p className="text-zinc-400 text-sm leading-relaxed max-w-3xl mb-10">
+              A gamified, level-based cybersecurity training platform where you progress from absolute beginner to advanced security professional. Start from Level 1 and work your way up through real-world vulnerability labs, blue team fundamentals, and hands-on challenges.
+            </p>
+
+            {/* Features Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+              {[
+                {
+                  icon: Target,
+                  title: "OWASP Top 10 & Beyond",
+                  desc: "Complete coverage of web vulnerabilities from basic to advanced.",
+                },
+                {
+                  icon: Layers,
+                  title: "Level-Based Progression",
+                  desc: "Start from zero, progress level by level at your own pace.",
+                },
+                {
+                  icon: Terminal,
+                  title: "Hands-On Labs",
+                  desc: "Real vulnerable environments to practice, not just theory.",
+                },
+                {
+                  icon: Shield,
+                  title: "Blue Team Fundamentals",
+                  desc: "Defensive security, SOC operations, and incident response.",
+                },
+                {
+                  icon: Trophy,
+                  title: "Gamified Experience",
+                  desc: "XP, levels, achievements — learn while having fun.",
+                },
+                {
+                  icon: BookOpen,
+                  title: "Beginner to Expert",
+                  desc: "No prior knowledge needed, we take you all the way.",
+                },
+              ].map((feature) => {
+                const Icon = feature.icon;
+                return (
+                  <div key={feature.title} className="flex gap-3.5">
+                    <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center shrink-0">
+                      <Icon className="w-5 h-5 text-red-400" />
+                    </div>
+                    <div>
+                      <h4 className="text-sm font-bold text-white">{feature.title}</h4>
+                      <p className="text-zinc-400 text-[11px] leading-relaxed mt-1">{feature.desc}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a
+                href="https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20RedLabs%20-%20your%20gamified%20cybersecurity%20learning%20platform.%20Please%20share%20more%20details."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 py-4 bg-gradient-to-r from-red-500 to-primary text-white font-medium rounded-xl hover:shadow-[0_0_25px_rgba(239,68,68,0.25)] transition-all duration-300 flex items-center justify-center gap-2 group"
+              >
+                Get Early Access
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="mailto:prem@reddoralabs.com"
+                className="px-8 py-4 bg-[#0d0d15] hover:bg-[#111118] border border-zinc-800 hover:border-zinc-700 text-zinc-300 font-medium rounded-xl transition-all flex items-center justify-center gap-2"
+              >
+                <MessageSquare className="w-4 h-4 text-red-400" />
+                Learn More
+              </a>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Why Choose Us Section */}
       <section className="py-20 relative border-t border-[#1e1e2f]/20">
         <div className="max-w-7xl mx-auto px-6">
@@ -316,7 +427,7 @@ export default function Home() {
                   Fully recognized Micro Enterprise under the Ministry of MSME, Government of India.
                 </p>
                 <div className="px-4 py-2 bg-[#050508]/80 border border-zinc-800 rounded-lg text-zinc-300 font-mono text-xs">
-                  UDYAM-MH-27-0104712
+                  UDYAM-MH-27-0261181
                 </div>
               </div>
             </div>
@@ -364,7 +475,7 @@ export default function Home() {
               Get Custom Quote
             </Link>
             <a
-              href="https://wa.me/919028586517"
+              href="https://wa.me/919699646517"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 bg-[#0d0d15] hover:bg-[#111118] border border-zinc-800 text-zinc-300 font-medium rounded-xl transition-all"

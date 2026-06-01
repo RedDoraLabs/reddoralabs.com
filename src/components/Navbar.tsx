@@ -141,7 +141,7 @@ export default function Navbar() {
                 Get a Quote
               </Link>
               <a
-                href="https://wa.me/919028586517"
+                href="https://wa.me/919699646517"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-center py-4 bg-[#0d0d15] border border-zinc-800 text-zinc-300 font-medium rounded-xl hover:bg-[#111118] transition-colors"
