@@ -193,7 +193,7 @@ export default function About() {
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">Join the RedDoraLabs Team</h2>
           <p className="text-zinc-400 text-xs max-w-md mx-auto mb-8 leading-relaxed">
-            We&apos;re looking for passionate interns in Content Writing, Social Media Management, and Cybersecurity. Grow with us from day one.
+            We&apos;re looking for passionate interns in Content Writing, Social Media, Video Editing, Event Management, and Cybersecurity. Grow with us from day one.
           </p>
           <a
             href="/careers"

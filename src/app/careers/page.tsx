@@ -8,11 +8,15 @@ import {
   Megaphone,
   Bug,
   ArrowRight,
-  MessageSquare,
+  ExternalLink,
   Zap,
   Heart,
   Rocket,
+  Video,
+  CalendarCheck,
 } from "lucide-react";
+
+const FORM_LINK = "https://forms.gle/2KtL5rBdc2RH8RvD9";
 
 export default function Careers() {
   const positions = [
@@ -28,7 +32,6 @@ export default function Careers() {
         "Develop case studies and service documentation",
       ],
       color: "primary",
-      wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Content%20Writing%20Intern%20position.%20Here%20is%20my%20resume.",
     },
     {
       icon: Megaphone,
@@ -42,7 +45,6 @@ export default function Careers() {
         "Track analytics and optimize content strategy",
       ],
       color: "secondary",
-      wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Social%20Media%20Manager%20Intern%20position.%20Here%20is%20my%20resume.",
     },
     {
       icon: Bug,
@@ -56,7 +58,32 @@ export default function Careers() {
         "Security research and tool development",
       ],
       color: "accent-red",
-      wa: "https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20am%20interested%20in%20the%20Cybersecurity%20Analyst%20Intern%20position.%20Here%20is%20my%20resume.",
+    },
+    {
+      icon: Video,
+      title: "Video Editor Intern",
+      type: "Internship · Remote",
+      desc: "Create engaging video content for our YouTube channel, Instagram Reels, and LinkedIn. Edit tutorials, product demos, event recaps, and promotional content that makes cybersecurity exciting.",
+      responsibilities: [
+        "Edit YouTube long-form videos and short-form Reels/Shorts",
+        "Create motion graphics, thumbnails, and visual effects",
+        "Add subtitles, color grading, and audio mixing",
+        "Collaborate on creative direction for video content",
+      ],
+      color: "amber-400",
+    },
+    {
+      icon: CalendarCheck,
+      title: "Event Management Intern",
+      type: "Internship · Remote / Hybrid",
+      desc: "Plan, coordinate, and execute events — from college cybersecurity workshops and bootcamps to online webinars and hackathons. Be the bridge between RedDoraLabs and the community.",
+      responsibilities: [
+        "Coordinate with colleges and organizations for workshops",
+        "Handle event logistics, registrations, and attendee communication",
+        "Manage speaker outreach and sponsorship proposals",
+        "Plan and promote events across social media channels",
+      ],
+      color: "emerald-400",
     },
   ];
 
@@ -99,7 +126,7 @@ export default function Careers() {
           >
             <Users className="w-3.5 h-3.5 text-secondary" />
             <span className="font-mono text-[10px] font-bold text-secondary uppercase tracking-widest">
-              We&apos;re Hiring
+              We&apos;re Hiring — 5 Open Positions
             </span>
           </motion.div>
           <motion.h1
@@ -118,6 +145,22 @@ export default function Careers() {
           >
             Build the future of cybersecurity and AI with us. We&apos;re looking for passionate people who want to learn, grow, and make an impact from day one.
           </motion.p>
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.15 }}
+            className="mt-8"
+          >
+            <a
+              href={FORM_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-xl hover:shadow-[0_0_25px_rgba(0,212,255,0.25)] transition-all duration-300 inline-flex items-center gap-2 group"
+            >
+              Apply Now
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+          </motion.div>
         </div>
       </section>
 
@@ -154,7 +197,7 @@ export default function Careers() {
           <div className="text-center mb-16">
             <h2 className="text-2xl sm:text-3xl font-bold text-white">Open Positions</h2>
             <p className="text-zinc-400 text-xs mt-2 max-w-md mx-auto">
-              Apply via WhatsApp with your resume. We review every application personally.
+              Apply through our application form. We review every submission personally.
             </p>
           </div>
 
@@ -194,13 +237,13 @@ export default function Careers() {
                     </div>
                     <div className="flex items-end md:items-center shrink-0">
                       <a
-                        href={role.wa}
+                        href={FORM_LINK}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="px-6 py-3 bg-gradient-to-r from-[#25D366] to-[#128C7E] hover:opacity-90 text-white text-xs font-bold rounded-lg transition-all flex items-center gap-2 shadow-lg shadow-[#25D366]/20 whitespace-nowrap"
+                        className="px-6 py-3 bg-gradient-to-r from-primary to-secondary hover:shadow-[0_0_20px_rgba(0,212,255,0.2)] text-white text-xs font-bold rounded-lg transition-all flex items-center gap-2 whitespace-nowrap"
                       >
-                        <MessageSquare className="w-4 h-4" />
-                        Apply via WhatsApp
+                        <ExternalLink className="w-4 h-4" />
+                        Apply Now
                       </a>
                     </div>
                   </div>
@@ -211,23 +254,24 @@ export default function Careers() {
         </div>
       </section>
 
-      {/* General Application */}
+      {/* General Application CTA */}
       <section className="py-16 border-t border-[#1e1e2f]/20">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
             Don&apos;t See Your Role?
           </h2>
           <p className="text-zinc-400 text-xs sm:text-sm max-w-md mx-auto mb-8 leading-relaxed">
-            We&apos;re always looking for talented individuals. Send us your resume and tell us how you can contribute to RedDoraLabs.
+            We&apos;re always looking for talented individuals. Fill out the form and tell us how you can contribute to RedDoraLabs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="https://wa.me/919699646517?text=Hi%20RedDoraLabs!%20I%20would%20love%20to%20work%20with%20you.%20Here%20is%20my%20resume%20and%20what%20I%20can%20bring%20to%20the%20team."
+              href={FORM_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-xl hover:shadow-[0_0_25px_rgba(0,212,255,0.25)] transition-all duration-300"
+              className="px-8 py-4 bg-gradient-to-r from-primary to-secondary text-white font-medium rounded-xl hover:shadow-[0_0_25px_rgba(0,212,255,0.25)] transition-all duration-300 inline-flex items-center gap-2 group"
             >
-              Send General Application
+              Apply via Form
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </a>
             <Link
               href="/contact"
