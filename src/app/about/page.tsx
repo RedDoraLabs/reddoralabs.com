@@ -233,20 +233,20 @@ export default function About() {
               </div>
             </div>
 
-            {/* Startup India DPIIT */}
-            <div className="glass p-8 rounded-3xl border border-zinc-900 relative overflow-hidden flex flex-col justify-between opacity-80">
+            {/* Pvt Ltd Incorporation */}
+            <div className="glass p-8 rounded-3xl border border-zinc-900 relative overflow-hidden flex flex-col justify-between">
               <div className="absolute top-0 right-0 w-24 h-24 bg-secondary/5 rounded-full filter blur-xl pointer-events-none" />
               <div>
                 <div className="w-10 h-10 rounded-xl bg-zinc-900 border border-secondary/20 flex items-center justify-center mb-6">
                   <Cpu className="w-5 h-5 text-secondary" />
                 </div>
-                <h3 className="text-lg font-bold text-white mb-2">Startup India Initiative</h3>
+                <h3 className="text-lg font-bold text-white mb-2">Private Limited Company</h3>
                 <p className="text-zinc-400 text-xs leading-relaxed mb-6">
-                  DPIIT recognition roadmap in-progress, unlocking innovation support, fast-track intellectual property processing, and statutory tax holidays.
+                  Incorporated under the Companies Act, 2013 as a Company limited by shares. Registered with the Ministry of Corporate Affairs, Government of India.
                 </p>
               </div>
-              <div className="p-3 bg-[#050508] rounded-xl border border-zinc-800 text-center font-mono text-xs text-zinc-400">
-                Pvt Ltd Incorporation Step In-Progress
+              <div className="p-3 bg-[#050508] rounded-xl border border-zinc-800 text-center font-mono text-xs text-zinc-300">
+                CIN: U62099MR2026PTC478260
               </div>
             </div>
           </div>

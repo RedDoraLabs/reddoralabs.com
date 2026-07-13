@@ -171,6 +171,19 @@ export default function Footer() {
                   Udyam: UDYAM-MH-27-0261181
                 </span>
               </div>
+
+              {/* CIN Badge */}
+              <div className="mt-2 p-3.5 rounded-xl bg-[#0d0d15] border border-primary/20 flex flex-col gap-1 shadow-inner shadow-black/40">
+                <div className="flex items-center gap-2">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+                  <span className="font-mono text-[10px] font-bold text-primary uppercase tracking-wider">
+                    Pvt Ltd Incorporated
+                  </span>
+                </div>
+                <span className="text-[11px] text-zinc-400 font-mono">
+                  CIN: U62099MR2026PTC478260
+                </span>
+              </div>
             </div>
           </div>
         </div>

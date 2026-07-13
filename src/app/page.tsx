@@ -390,12 +390,17 @@ export default function Home() {
                 <div className="w-16 h-16 rounded-2xl bg-zinc-900 border border-primary/20 flex items-center justify-center mb-4">
                   <Award className="w-8 h-8 text-primary" />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Government Registered MSME</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Government Registered Company</h3>
                 <p className="text-zinc-400 text-xs max-w-xs mb-4">
-                  Fully recognized Micro Enterprise under the Ministry of MSME, Government of India.
+                  Incorporated Private Limited Company & recognized Micro Enterprise under the Government of India.
                 </p>
-                <div className="px-4 py-2 bg-[#050508]/80 border border-zinc-800 rounded-lg text-zinc-300 font-mono text-xs">
-                  UDYAM-MH-27-0261181
+                <div className="flex flex-col gap-2">
+                  <div className="px-4 py-2 bg-[#050508]/80 border border-primary/30 rounded-lg text-zinc-200 font-mono text-xs">
+                    CIN: U62099MR2026PTC478260
+                  </div>
+                  <div className="px-4 py-2 bg-[#050508]/80 border border-zinc-800 rounded-lg text-zinc-400 font-mono text-xs">
+                    UDYAM-MH-27-0261181
+                  </div>
                 </div>
               </div>
             </div>
