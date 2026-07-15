@@ -168,7 +168,7 @@ export default function Footer() {
                   </span>
                 </div>
                 <span className="text-[11px] text-zinc-400 font-mono">
-                  Udyam: UDYAM-MH-27-0261181
+                  Udyam: UDYAM-MH-27-0268884
                 </span>
               </div>
 

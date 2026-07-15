@@ -399,7 +399,7 @@ export default function Home() {
                     CIN: U62099MR2026PTC478260
                   </div>
                   <div className="px-4 py-2 bg-[#050508]/80 border border-zinc-800 rounded-lg text-zinc-400 font-mono text-xs">
-                    UDYAM-MH-27-0261181
+                    UDYAM-MH-27-0268884
                   </div>
                 </div>
               </div>

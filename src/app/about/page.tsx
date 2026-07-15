@@ -229,7 +229,7 @@ export default function About() {
                 </p>
               </div>
               <div className="p-3 bg-[#050508] rounded-xl border border-zinc-800 text-center font-mono text-xs text-zinc-300">
-                Udyam: UDYAM-MH-27-0261181
+                Udyam: UDYAM-MH-27-0268884
               </div>
             </div>
 
