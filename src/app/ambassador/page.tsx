@@ -19,7 +19,7 @@ import {
   Crown,
 } from "lucide-react";
 
-const FORM_LINK = "https://forms.gle/YOUR_FORM_LINK_HERE";
+const FORM_LINK = "https://forms.gle/Zn5YEqHbk4TXdhJL9";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
