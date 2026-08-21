@@ -97,12 +97,12 @@ export default function CTFPage() {
   ];
 
   const timeline = [
-    { date: "Aug 19", event: "Registrations Open", active: true },
-    { date: "Aug 28", event: "Registration Closes", active: false },
-    { date: "Aug 29", event: "Credentials Sent", active: false },
-    { date: "Aug 30, 10 AM", event: "Competition STARTS 🔥", active: false },
-    { date: "Aug 31, 10 AM", event: "Competition ENDS", active: false },
-    { date: "Sep 1", event: "Winners Announced 🏆", active: false },
+    { date: "Aug 22", event: "Registrations Open", active: true },
+    { date: "Sep 17", event: "Registration Closes", active: false },
+    { date: "Sep 18", event: "Credentials Sent", active: false },
+    { date: "Sep 19, 10 AM", event: "Competition STARTS 🔥", active: false },
+    { date: "Sep 20, 10 AM", event: "Competition ENDS", active: false },
+    { date: "Sep 21", event: "Winners Announced 🏆", active: false },
   ];
 
   const prizes = [
@@ -264,7 +264,7 @@ export default function CTFPage() {
               <Timer className="w-5 h-5 text-cyan-400" />
               <div className="text-left">
                 <p className="text-xs text-slate-500 font-medium">COMPETITION DATE</p>
-                <p className="text-sm font-bold text-white">Aug 30, 10:00 AM — Aug 31, 10:00 AM IST</p>
+                <p className="text-sm font-bold text-white">Sep 19, 10:00 AM — Sep 20, 10:00 AM IST</p>
               </div>
             </motion.div>
           </motion.div>
@@ -459,7 +459,7 @@ export default function CTFPage() {
           <div className="grid md:grid-cols-4 gap-6">
             {[
               { step: "01", title: "Register", desc: "Sign up on Unstop. Solo (₹99) or Duo (₹149).", icon: Users },
-              { step: "02", title: "Get Credentials", desc: "Receive your CTF platform login on Aug 29.", icon: Lock },
+              { step: "02", title: "Get Credentials", desc: "Receive your CTF platform login on Sep 18.", icon: Lock },
               { step: "03", title: "Hack", desc: "Solve challenges across 5 categories for 24 hours.", icon: Terminal },
               { step: "04", title: "Win", desc: "Top the leaderboard. Claim your prize.", icon: Trophy },
             ].map((s, i) => (
@@ -504,7 +504,7 @@ export default function CTFPage() {
             {[
               "Open to all Indian residents. No age restriction.",
               "Team size: Solo (1 person) or Duo (max 2 members).",
-              "Duration: 24 hours — Aug 30, 10:00 AM to Aug 31, 10:00 AM IST.",
+              "Duration: 24 hours — Sep 19, 10:00 AM to Sep 20, 10:00 AM IST.",
               "Format: Jeopardy-style. Solve challenges, find flags, earn points.",
               "Flag format: flag{example_text_here}",
               "Internet, tools, and resources are freely allowed. This is NOT an exam.",
@@ -591,7 +591,7 @@ export default function CTFPage() {
               </h2>
               <p className="text-slate-400 text-sm mb-6 max-w-md mx-auto">
                 20 challenges. 5 categories. 24 hours. ₹5,000 cash prize.
-                Registration closes Aug 28. Don&apos;t miss out.
+                Registration closes Sep 17. Don&apos;t miss out.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
