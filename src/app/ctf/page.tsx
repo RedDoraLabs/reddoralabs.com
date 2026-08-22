@@ -238,7 +238,7 @@ export default function CTFPage() {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="https://unstop.com/hackathons/operation-tiranga-reddoralabs"
+                href="https://forms.gle/uqjvr88AJL6dA5Zx6"
                 target="_blank"
                 className="group inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl text-base hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
               >
@@ -596,7 +596,7 @@ export default function CTFPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="https://unstop.com/hackathons/operation-tiranga-reddoralabs"
+                  href="https://forms.gle/uqjvr88AJL6dA5Zx6"
                   target="_blank"
                   className="group inline-flex items-center gap-2 px-8 py-3.5 bg-gradient-to-r from-cyan-500 to-purple-500 text-white font-bold rounded-xl text-base hover:shadow-lg hover:shadow-cyan-500/20 transition-all duration-300"
                 >
