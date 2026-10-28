@@ -36,6 +36,68 @@ yarn-error.log*
 # vercel
 .vercel
 
+# ═══════════════════════════════════════
+# SENSITIVE / INTERNAL FILES — NEVER COMMIT
+# ═══════════════════════════════════════
+
+# Legal & Corporate
+board-resolution*.html
+coi_document.pdf
+business_pan_url.pdf
+letter-of-authorization.html
+company-letterhead.html
+office-name-board.html
+financial-projections*.html
+attendance-concession-application.html
+legal/
+
+# Offer Letters & HR
+offer-letter*.html
+offer-letter*.png
+offer-letters/
+generate-offer-letters*.js
+ambassador-offer-letter.html
+ambassador-onboarding-presentation.html
+founder-profile*.html
+
+# Client Documents
+client-*.html
+
+# VAPT Assignments
+vapt/
+
+# Conference / Event Prep
+c0c0n-*.html
+c0c0n-*.md
+ciacon-*.html
+letter-bsides*.html
+
+# Pitch Decks (internal)
+*pitch-deck*.html
+*Vault*.html
+50-lakh-roadmap.html
+
+# Media / Videos
+*.MOV
+*.mov
+*.mp4
+*.avi
+
+# AI Config
+CLAUDE.md
+
+# Scratch / Temp
+scratch/
+
+# Certificates
+certificates/
+
+# Demos (c0c0n)
+demos/
+
+# PDF documents
+*.pdf
+
 # typescript
 *.tsbuildinfo
 next-env.d.ts
