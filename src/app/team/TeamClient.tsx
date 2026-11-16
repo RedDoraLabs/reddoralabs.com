@@ -99,6 +99,7 @@ export default function Team() {
         <div className="mx-auto grid max-w-6xl grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {teamMembers.map((member, index) => {
             const isPurple = member.accent === "purple";
+            const isRed = member.accent === "red";
 
             return (
               <motion.article
@@ -109,12 +110,18 @@ export default function Team() {
                 className={`glass group relative overflow-hidden rounded-3xl border p-7 transition-all duration-300 hover:-translate-y-1 ${
                   isPurple
                     ? "border-secondary/20 hover:border-secondary/50 hover:shadow-[0_0_30px_rgba(139,92,246,0.12)]"
+                  : isRed
+                    ? "border-red-500/20 hover:border-red-500/50 hover:shadow-[0_0_30px_rgba(239,68,68,0.12)]"
                     : "border-primary/20 hover:border-primary/50 hover:shadow-[0_0_30px_rgba(0,212,255,0.12)]"
                 }`}
               >
                 <div
                   className={`absolute -right-10 -top-10 h-32 w-32 rounded-full blur-3xl transition-opacity group-hover:opacity-100 ${
-                    isPurple ? "bg-secondary/10" : "bg-primary/10"
+                    isPurple
+                      ? "bg-secondary/10"
+                    : isRed
+                      ? "bg-red-500/10"
+                      : "bg-primary/10"
                   }`}
                 />
 
@@ -122,12 +129,18 @@ export default function Team() {
                   className={`relative mb-8 flex h-16 w-16 items-center justify-center rounded-2xl border ${
                     isPurple
                       ? "border-secondary/30 bg-secondary/10"
+                    : isRed
+                      ? "border-red-500/30 bg-red-500/10"
                       : "border-primary/30 bg-primary/10"
                   }`}
                 >
                   <UserRound
                     className={`h-7 w-7 ${
-                      isPurple ? "text-secondary" : "text-primary"
+                      isPurple
+                          ? "text-secondary"
+                      : isRed
+                          ? "text-red-500"
+                          : "text-primary"
                     }`}
                   />
                 </div>
@@ -137,6 +150,8 @@ export default function Team() {
                     className={`mb-3 inline-block rounded-full border px-3 py-1 font-mono text-[10px] font-bold uppercase tracking-[0.15em] ${
                       isPurple
                         ? "border-secondary/30 bg-secondary/10 text-secondary"
+                      : isRed
+                        ? "border-red-500/30 bg-red-500/10 text-red-400"
                         : "border-primary/30 bg-primary/10 text-primary"
                     }`}
                   >
