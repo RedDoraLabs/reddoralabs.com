@@ -12,7 +12,7 @@ const teamMembers = [
     accent: "cyan",
   },
   {
-    name: "Tejesh Patil",
+    name: "T.P",
     role: "COO",
     department: "Leadership",
     accent: "purple",
@@ -30,19 +30,19 @@ const teamMembers = [
     accent: "purple",
   },
   {
-    name: "Rayya Rabbani",
-    role: "Social Media Manager Intern",
+    name: "R.R",
+    role: "Social Media Manager",
     department: "Marketing",
     accent: "cyan",
   },
   {
-    name: "Bhavkirat Kaur",
-    role: "Cybersecurity Analyst Intern",
+    name: "B.K",
+    role: "Cybersecurity Analyst",
     department: "Security",
     accent: "purple",
   },
   {
-    name: "Bidisha De",
+    name: "B.De",
     role: "Cybersecurity Analyst Intern",
     department: "Security",
     accent: "cyan",
