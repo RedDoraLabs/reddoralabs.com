@@ -12,6 +12,13 @@ const teamMembers = [
     accent: "cyan",
   },
   {
+    name: "Rupali Patil",
+    role: "Director",
+    department: "Leadership",
+    linkedin: "",
+    accent: "red",
+  },
+  {
     name: "T.P",
     role: "COO",
     department: "Leadership",
